@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MVC_Demo.Models.Employee>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayCollection</title>
+</head>
+<body>
+    <div> 
+      
+            @foreach (var item in Model)
+            {
+                <b>EmpID        :</b>@item.EmpID<br />
+                <b>First Name   :</b>@item.FirstName<br />
+                <b>Last Name    :</b>@item.LastName<br />
+                <b>Salary       :</b>@item.Salary<br />
+            }
+       
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+    MVC_Demo.Models.Employee emp = @ViewBag.emp;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayEmployee</title>
+</head>
+<body>
+    <div> 
+        <pre>
+            <b>EmpID        :</b>@emp.EmpID
+            <b>First Name   :</b>@emp.FirstName
+            <b>Last Name    :</b>@emp.LastName
+            <b>Salary       :</b>@emp.Salary
+        </pre>
+    </div>
+</body>
+</html>

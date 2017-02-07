@@ -1,0 +1,46 @@
+﻿@model MVC_Demo.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>STEmployeeForm</title>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("STDisplayEmployee", "Home", FormMethod.Post))
+        {
+            @Html.ValidationSummary()
+            <table>
+                <tr>
+                    <td>@Html.LabelFor(e => e.EmpID)</td>
+                    <td>@Html.TextBoxFor(e=> e.EmpID) @Html.ValidationMessageFor(e=> e.EmpID) </td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(e=> e.FirstName)</td>
+                    <td>@Html.TextBoxFor(e=> e.FirstName) @Html.ValidationMessageFor(e => e.FirstName)</td>
+                </tr>
+                <tr>                    
+                    <td>@Html.LabelFor(e => e.LastName)</td>
+                    <td>@Html.TextBoxFor(e => e.LastName) @Html.ValidationMessageFor(e => e.LastName)</td>                    
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(e => e.Salary)</td>
+                    <td>@Html.TextBoxFor(e => e.Salary) @Html.ValidationMessageFor(e => e.Salary)</td>  
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" name="btnSubmit" value="Submit" /></td>
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
